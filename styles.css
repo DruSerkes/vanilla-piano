@@ -1,19 +1,25 @@
-*,
-body {
-  margin: 0;
-  background-color: #565656;
-  color: white;
-  text-align: center;
-}
-
 :root {
   --piano-height: 50vh;
   --piano-black: #333;
+  --piano-white: ivory;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #565656;
+  color: var(--piano-white);
+  text-align: center;
+  min-height: 100vh;
 }
 
 h1 {
-  margin: 3rem 0;
   font-size: 4.5rem;
+}
+
+main {
+  min-height: var(--piano-height);
 }
 
 section {
@@ -21,7 +27,7 @@ section {
   justify-content: center;
   max-width: 75%;
   width: max-content;
-  margin: auto;
+  margin: 0 auto;
   height: var(--piano-height);
   background-color: ivory;
   position: relative;
@@ -78,4 +84,46 @@ section.piano div.black-key:active {
 
 .black-key:nth-child(11) {
   left: 83%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--piano-white);
+  color: black;
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+@media only screen and (max-width: 520px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  section.piano div.black-key {
+    min-width: 1.25rem;
+    font-size: 1rem;
+  }
+
+  .black-key:nth-child(2) {
+    left: -4.5%;
+  }
+
+  .black-key:nth-child(4) {
+    left: 15%;
+  }
+
+  .black-key:nth-child(7) {
+    left: 52.5%;
+  }
+
+  .black-key:nth-child(9) {
+    left: 70%;
+  }
+
+  .black-key:nth-child(11) {
+    left: 88%;
+  }
+
 }
